@@ -25,6 +25,14 @@ Sentiment Breakdown: 95% Extremely Negative / Hostile | 5% Frustrated Resignatio
 
 Primary Emotional Drivers: Sense of deception ("Tv farzi sab", "everyone make fool"), anger over uncollected items ("defective item is still at my door unreturned"), and account deletion intent ("Delete in Shopzilla account").
 
+### 📊 Root Cause Analysis & Executive Remediation Matrix
+
+| Root Cause | Customer Impact | Recommended Automated AI/UX Remediation |
+| :--- | :--- | :--- |
+| **1. Unhandled Reverse Logistics Dispatch API Failure** | Physical defective items (TVs, wrong-sized mattresses) sit uncollected for 10+ days, locking up customer capital (**₹6,946.42** avg item value) and triggering account churn. | **Automated SLA Failover Engine:** Deploy a background trigger that automatically re-routes unassigned pickup tickets to a secondary 3PL courier partner if a technician does not claim the task within 24 hours. |
+| **2. Stateless Support Session Loop & Delayed Refund Triggers** | Customers contact support repeatedly (*"Kosish kar rahe he"*), receiving generic automated responses while their refund capital remains blocked. | **Stateful LLM Support Agent:** Implement a conversational AI agent with cross-session memory that proactively updates customers via WhatsApp/SMS and triggers instant provisional refunds upon verified courier handover. |
+| **3. Catalog Sizing Variance & Pre-Shipment QC Failures** | Incorrect product dimensions (e.g., wrong mattress size) are delivered, requiring physical technician validation before initiating simple exchanges. | **AI Photo-Verification UI:** Integrate a self-service return UI in the mobile app allowing users to upload photo/barcode proof of wrong items for instant, automated return authorization without manual technician visits. |
+
 ## 🎯 LLM Prompt Engineering Framework
 
 ### System Prompt Architecture
